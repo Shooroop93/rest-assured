@@ -2,9 +2,8 @@ package ru.example;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import ru.example.method.antispoof.AntiSpoofMethod;
+import ru.example.method.AntiSpoofMethod;
 import ru.example.wiki.utilities.BaseMethod;
 
 public class AntiSpoofTest {

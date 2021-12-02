@@ -4,9 +4,13 @@ import static ru.example.wiki.utilities.property.Property.getProperty;
 
 public interface BaseMethod {
 
-    static String baseUrlApiAntiSpoof() {
-        return getProperty("baseUrlApiAntiSpoof");
+    static String UrlApiAntiSpoof() {
+        return getProperty("UrlApiAntiSpoof");
     }
+
+    static String UrlApiLogin() {
+        return getProperty("UrlApiLogin");
+    };
 
     static String messageStatusCode() {
         return getProperty("messageStatusCode");
@@ -23,8 +27,13 @@ public interface BaseMethod {
     static String messageNormalised() {
         return getProperty("messageNormalised");
     }
+
     static String messageError() {
         return getProperty("messageError");
+    }
+
+    static String messageLoginResult() {
+        return getProperty("messageLoginResult");
     }
 
 }
