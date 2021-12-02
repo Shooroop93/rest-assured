@@ -66,4 +66,13 @@ public class AntiSpoofMethod {
                         .extract().body().jsonPath().getString("antispoof.result");
     }
 
+    public Integer getStatusCode(String name) {
+        return
+                given()
+                        .when()
+                        .param("username", name)
+                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .getStatusCode();
+    }
+
 }
