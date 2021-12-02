@@ -8,4 +8,20 @@ public interface BaseMethod {
         return getProperty("baseUrlApiAntiSpoof");
     }
 
+    static String messageStatusCode() {
+        return getProperty("messageStatusCode");
+    }
+
+    static String messageUserName() {
+        return getProperty("messageUserName");
+    }
+
+    static String messageResult() {
+        return getProperty("messageResult");
+    }
+
+    static String messageNormalised() {
+        return getProperty("messageNormalised");
+    }
+
 }
