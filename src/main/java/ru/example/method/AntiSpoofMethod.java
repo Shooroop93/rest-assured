@@ -1,4 +1,4 @@
-package ru.example.method.antispoof;
+package ru.example.method;
 
 import ru.example.wiki.utilities.BaseMethod;
 
@@ -11,7 +11,7 @@ public class AntiSpoofMethod {
                 given()
                         .when()
                         .param("username", name)
-                        .get(BaseMethod.baseUrlApiAntiSpoof())
+                        .get(BaseMethod.UrlApiAntiSpoof())
                         .then()
                         .extract().body().jsonPath().getString("antispoof.username");
     }
@@ -21,7 +21,7 @@ public class AntiSpoofMethod {
                 given()
                         .when()
                         .param("username", name)
-                        .get(BaseMethod.baseUrlApiAntiSpoof())
+                        .get(BaseMethod.UrlApiAntiSpoof())
                         .then()
                         .extract().body().jsonPath().getString("antispoof.normalised");
     }
@@ -31,7 +31,7 @@ public class AntiSpoofMethod {
                 given()
                         .when()
                         .param("username", name)
-                        .get(BaseMethod.baseUrlApiAntiSpoof())
+                        .get(BaseMethod.UrlApiAntiSpoof())
                         .then()
                         .extract().body().jsonPath().getString("antispoof.result");
     }
@@ -41,7 +41,7 @@ public class AntiSpoofMethod {
                 given()
                         .when()
                         .param("username", name)
-                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .post(BaseMethod.UrlApiAntiSpoof())
                         .then()
                         .extract().body().jsonPath().getString("antispoof.username");
     }
@@ -51,7 +51,7 @@ public class AntiSpoofMethod {
                 given()
                         .when()
                         .param("username", name)
-                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .post(BaseMethod.UrlApiAntiSpoof())
                         .then()
                         .extract().body().jsonPath().getString("antispoof.normalised");
     }
@@ -61,7 +61,7 @@ public class AntiSpoofMethod {
                 given()
                         .when()
                         .param("username", name)
-                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .post(BaseMethod.UrlApiAntiSpoof())
                         .then()
                         .extract().body().jsonPath().getString("antispoof.result");
     }
@@ -71,7 +71,7 @@ public class AntiSpoofMethod {
                 given()
                         .when()
                         .param("username", name)
-                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .post(BaseMethod.UrlApiAntiSpoof())
                         .getStatusCode();
     }
 
@@ -80,7 +80,7 @@ public class AntiSpoofMethod {
                 given()
                         .when()
                         .param("username", name)
-                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .post(BaseMethod.UrlApiAntiSpoof())
                         .getStatusCode();
     }
 
@@ -89,7 +89,7 @@ public class AntiSpoofMethod {
                 given()
                         .when()
                         .param("username", name)
-                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .post(BaseMethod.UrlApiAntiSpoof())
                         .then()
                         .extract().body().jsonPath().getString("antispoof.error");
     }
@@ -99,7 +99,7 @@ public class AntiSpoofMethod {
                 given()
                         .when()
                         .param("username", name)
-                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .post(BaseMethod.UrlApiAntiSpoof())
                         .then()
                         .extract().body().jsonPath().getString("antispoof.error");
     }
