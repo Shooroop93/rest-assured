@@ -24,6 +24,7 @@ public class LoginTest {
     public void checkTestCaseTwelve() {
         Assert.assertEquals(LoginMethod.getStatusCode(lgname,lgpassword, lgtoken), statusCode200);
         System.out.println(LoginMethod.getLoginResult(lgname, lgpassword, lgtoken));
+
     }
 }
 
