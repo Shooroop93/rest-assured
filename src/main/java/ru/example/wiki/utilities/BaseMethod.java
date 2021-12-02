@@ -23,5 +23,8 @@ public interface BaseMethod {
     static String messageNormalised() {
         return getProperty("messageNormalised");
     }
+    static String messageError() {
+        return getProperty("messageError");
+    }
 
 }

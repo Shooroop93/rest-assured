@@ -66,13 +66,42 @@ public class AntiSpoofMethod {
                         .extract().body().jsonPath().getString("antispoof.result");
     }
 
-    public Integer getStatusCode(String name) {
+    public Integer getStatusCodePost(String name) {
         return
                 given()
                         .when()
                         .param("username", name)
                         .post(BaseMethod.baseUrlApiAntiSpoof())
                         .getStatusCode();
+    }
+
+    public Integer getStatusCodeGet(String name) {
+        return
+                given()
+                        .when()
+                        .param("username", name)
+                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .getStatusCode();
+    }
+
+    public String getErrorPost(String name) {
+        return
+                given()
+                        .when()
+                        .param("username", name)
+                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .then()
+                        .extract().body().jsonPath().getString("antispoof.error");
+    }
+
+    public String getErrorGet(String name) {
+        return
+                given()
+                        .when()
+                        .param("username", name)
+                        .post(BaseMethod.baseUrlApiAntiSpoof())
+                        .then()
+                        .extract().body().jsonPath().getString("antispoof.error");
     }
 
 }
